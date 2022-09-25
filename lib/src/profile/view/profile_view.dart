@@ -48,7 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       fontSize: VariableUtilities.size.width * 0.045,
                       color: Colors.black),
                 ):Text(
-            _profileProvider.userName!,
+            _profileProvider.userName??"Not Added",
             style: TextStyle(
             fontWeight: FontWeight.w700,
             fontSize: VariableUtilities.size.width * 0.045,

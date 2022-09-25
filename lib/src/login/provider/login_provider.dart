@@ -68,4 +68,11 @@ class LogInProvider extends ChangeNotifier {
       }
     }
   }
+  @override
+  void dispose() {
+    emailController.clear();
+    passwordController.clear();
+    // TODO: implement dispose
+    super.dispose();
+  }
 }

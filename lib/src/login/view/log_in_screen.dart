@@ -14,7 +14,6 @@ class LogInScreen extends StatefulWidget {
 }
 
 class _LogInScreenState extends State<LogInScreen> {
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -71,11 +70,13 @@ class _LogInScreenState extends State<LogInScreen> {
                             title: value ?? "Server Error", isError: false);
                         ScaffoldMessenger.of(context).showSnackBar(snack);
                         if (value == "LogIn Successfully") {
+                          _logInProvider.dispose();
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => const HomeScreen(),
                               ));
+                          
                         }
                       });
                     },
@@ -87,8 +88,13 @@ class _LogInScreenState extends State<LogInScreen> {
                           width: VariableUtilities.size.width * 0.1,
                           fit: BoxFit.fill,
                         ),
-                        SizedBox(height: 5,),
-                        Text("Gmail Login",style: TextStyle(color: Colors.black,fontSize:17 ),)
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "Gmail Login",
+                          style: TextStyle(color: Colors.black, fontSize: 17),
+                        )
                       ],
                     ),
                   )

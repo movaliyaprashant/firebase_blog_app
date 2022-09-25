@@ -85,6 +85,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Consumer<HomeProvider>(
         builder: (context, HomeProvider _homeProvider, child) {
+          _homeProvider.getToken();
           List<BlogDataModel> blogData =
               Provider.of<List<BlogDataModel>>(context);
           if (_homeProvider.selectedCategory != "All") {
