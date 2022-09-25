@@ -28,3 +28,5 @@ and bottom side Sign out button there. If User is signOut then navigate to login
 7) Search Screen: InSide search Screen select category and search username or email.
 if Select All category then search userName/email vise.
 Otherwise search their category vise userName/Email
+
+8) Notification: when you send notification from firebase masseging with FCM token then user get notification when app is background and close mode.
