@@ -1,5 +1,3 @@
-login 
-email : testuser@gmail.com  password : 123456123456.
 
 
 1) Splash screen :Check User is Login or Not.
